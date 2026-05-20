@@ -2,56 +2,88 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lanche Escolhido - FoodExpress</title>
+    <title>FoodExpress - Cardápio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="/">🍔 FoodExpress</a>
-            <div class="navbar-nav ms-auto flex-row gap-3">
-                <a class="nav-link text-white" href="/">Início</a>
-                <a class="nav-link text-white" href="/cardapio">Cardápio</a>
-                <a class="nav-link text-white" href="/pedidos">Pedidos</a>
-                <a class="nav-link text-white" href="/contato">Contato</a>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container my-5 text-center">
-        <h1 class="mb-4">Lanche escolhido: <span class="text-danger">{{ nome }}</span></h1>
-
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                
-                {% if encontrado %}
-                    <div class="card p-4 shadow-sm border-success">
-                        <h3 class="text-success mb-3">🍔 Item Disponível!</h3>
-                        
-                        {% if nome.lower() == 'pizza' %}
-                            <p class="lead">Preparando a melhor massa fina e crocante no forno a lenha!</p>
-                        {% elif nome.lower() == 'hamburguer' %}
-                            <p class="lead">Grelhando o seu blend artesanal suculento na chapa!</p>
-                        {% elif nome.lower() == 'batata' %}
-                            <p class="lead">Fritando suas batatas para ficarem super crocantes por fora!</p>
-                        {% elif nome.lower() == 'milkshake' %}
-                            <p class="lead">Batendo o sorvete bem gelado com muita calda!</p>
-                        {% endif %}
-                        
-                        <a href="/cardapio" class="btn btn-success mt-3">Voltar ao Cardápio</a>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">FoodExpress</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/cardapio">Cardápio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pedidos">Pedidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contato">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/cliente">Cliente</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container mt-4">
+        <h2 class="text-center fw-bold mb-4">Nosso Cardápio</h2>
+        
+        <div class="row">
+            
+            <div class="col-md-3 mb-3">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename='imagens/burger.jpg') }}" class="card-img-top" alt="X-Burguer">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">X-Burguer</h5>
+                        <p class="card-text text-muted">Hambúrguer artesanal com muito queijo prato.</p>
+                        <h6 class="text-danger fw-bold">R$ 30,00</h6>
+                        <a href="/lanche/hamburguer" class="btn btn-danger w-100 mt-2">Comprar</a>
                     </div>
-                {% else %}
-                    <div class="alert alert-danger shadow-sm py-4" role="alert">
-                        <h4 class="alert-heading fw-bold">Ops! Lanche não encontrado.</h4>
-                        <p class="mb-0">Infelizmente não trabalhamos com esse item no nosso menu atual.</p>
-                        <hr>
-                        <a href="/cardapio" class="btn btn-outline-danger btn-sm">Ver opções disponíveis</a>
-                    </div>
-                {% endif %}
-
+                </div>
             </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename='imagens/pizza.jpg') }}" class="card-img-top" alt="Pizza">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Pizza</h5>
+                        <p class="card-text text-muted">Pizza brotinho sabor calabresa com mussarela.</p>
+                        <h6 class="text-danger fw-bold">R$ 45,00</h6>
+                        <a href="/lanche/pizza" class="btn btn-danger w-100 mt-2">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename='imagens/batata.jpg') }}" class="card-img-top" alt="Batata Frita">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Batata Frita</h5>
+                        <p class="card-text text-muted">Batatas fritas crocantes e sequinhas.</p>
+                        <h6 class="text-danger fw-bold">R$ 15,00</h6>
+                        <a href="/lanche/batata" class="btn btn-danger w-100 mt-2">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename='imagens/burger.jpg') }}" class="card-img-top" alt="Milkshake">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Milkshake</h5>
+                        <p class="card-text text-muted">Milkshake cremoso sabor Ovomaltine.</p>
+                        <h6 class="text-danger fw-bold">R$ 18,00</h6>
+                        <a href="/lanche/milkshake" class="btn btn-danger w-100 mt-2">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 

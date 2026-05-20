@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>FoodExpress - Contato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">FoodExpress</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/cardapio">Cardápio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pedidos">Pedidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contato">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/cliente">Cliente</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container mt-4" style="max-width: 600px;">
+        <h2 class="fw-bold mb-3">Contato</h2>
+        <p class="text-muted">Telefone Sac: (84) 9999-9999 | Email: suporte@foodexpress.com</p>
+        
+        <form class="p-4 bg-white rounded border mt-4">
+            <div class="mb-3">
+                <label for="campoNome" class="form-label fw-bold">Nome:</label>
+                <input type="text" id="campoNome" class="form-control" placeholder="Digite seu nome completo" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="campoMensagem" class="form-label fw-bold">Mensagem:</label>
+                <textarea id="campoMensagem" class="form-control" rows="3" placeholder="Escreva sua mensagem aqui" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-danger w-100 fw-bold">Enviar</button>
+        </form>
+    </div>
+
+</body>
+</html>

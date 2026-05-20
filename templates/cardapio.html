@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanche Escolhido - FoodExpress</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">🍔 FoodExpress</a>
+            <div class="navbar-nav ms-auto flex-row gap-3">
+                <a class="nav-link text-white" href="/">Início</a>
+                <a class="nav-link text-white" href="/cardapio">Cardápio</a>
+                <a class="nav-link text-white" href="/pedidos">Pedidos</a>
+                <a class="nav-link text-white" href="/contato">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 text-center">
+        <h1 class="mb-4">Lanche escolhido: <span class="text-danger">{{ nome }}</span></h1>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                
+                {% if encontrado %}
+                    <div class="card p-4 shadow-sm border-success">
+                        <h3 class="text-success mb-3">🍔 Item Disponível!</h3>
+                        
+                        {% if nome.lower() == 'pizza' %}
+                            <p class="lead">Preparando a melhor massa fina e crocante no forno a lenha!</p>
+                        {% elif nome.lower() == 'hamburguer' %}
+                            <p class="lead">Grelhando o seu blend artesanal suculento na chapa!</p>
+                        {% elif nome.lower() == 'batata' %}
+                            <p class="lead">Fritando suas batatas para ficarem super crocantes por fora!</p>
+                        {% elif nome.lower() == 'milkshake' %}
+                            <p class="lead">Batendo o sorvete bem gelado com muita calda!</p>
+                        {% endif %}
+                        
+                        <a href="/cardapio" class="btn btn-success mt-3">Voltar ao Cardápio</a>
+                    </div>
+                {% else %}
+                    <div class="alert alert-danger shadow-sm py-4" role="alert">
+                        <h4 class="alert-heading fw-bold">Ops! Lanche não encontrado.</h4>
+                        <p class="mb-0">Infelizmente não trabalhamos com esse item no nosso menu atual.</p>
+                        <hr>
+                        <a href="/cardapio" class="btn btn-outline-danger btn-sm">Ver opções disponíveis</a>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

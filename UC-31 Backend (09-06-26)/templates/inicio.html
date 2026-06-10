@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body class="tema-{{ tema }}">
+    <div class="card">
+        <h1>Cookies no Flask</h1>
+    {% if nome %}
+        <h2>Olá, {{ nome }}!</h2>
+        <p>Email: {{ email }}</p>
+    {% else %}
+        <h2>Bem-vindo visitante!</h2>
+    {% endif %}
+
+    <form action="/salvar" method="POST">
+        <input type="text" name="nome" placeholder="Digite seu nome" required>
+        <input type="email" name="email" placeholder="Digite seu email" required>
+        <button type="submit">Salvar</button>
+    </form>
+
+        <h2>Tema atual: {{ tema }}</h2>
+        <div class="botões">
+            <a href="{{ url_for('trocar_tema', escolha='claro') }}">Tema Claro</a>
+            <a href="{{ url_for('trocar_tema', escolha='escuro') }}">Tema Escuro</a>
+        </div>
+    </div>
+    
+</body>
+</html>

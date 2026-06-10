@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.tema-claro {
+    background-color: white;
+    color: black;
+}
+
+.tema-escuro {
+    background-color: #222;
+    color: white;
+}
+
+.card {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+    width: 80%;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.botoes {
+    margin-top: 15px;
+}

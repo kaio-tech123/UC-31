@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Casas de Apostas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }} ">
+</head>
+<body>
+<div class="container">
+
+    <!-- tela inicial -->
+    <div class="card tela ativa" id="tela-inicio">
+        <div class="emoji">🎰</div>
+        <h1>Quiz - Casas de Apostas</h1>
+        <p>Teste seus conhecimentos sobre o mundo das apostas esportivas!</p>
+        <p>São <strong>5 perguntas</strong> sobre odds, cashout, regulamentação e mais.</p>
+        <button class="btn" onclick="comecar()">Começar o quiz</button>
+    </div>
+
+    <!-- tela do quiz -->
+    <div class="card tela" id="tela-quiz">
+        <div class="progresso-topo">
+            <span id="contador">Pergunta 1 de 5</span>
+            <span id="pontos">Pontuação: 0</span>
+        </div>
+        <div class="barra-container">
+            <div class="barra-progresso" id="barra" style="width: 0%"></div>
+        </div>
+        <h2 id="pergunta"></h2>
+        <div id="opcoes"></div>
+        <button class="btn" onclick="responder()">Responder</button>
+    </div>
+
+    <!-- tela de resultado -->
+    <div class="card tela" id="tela-resultado">
+        <div class="emoji" id="emoji-resultado"></div>
+        <h1>Resultado Final</h1>
+        <div class="placar">
+            <span id="acertos"></span>
+            <span class="divisor">/</span>
+            <span class="total">5</span>
+        </div>
+        <p class="mensagem" id="mensagem"></p>
+        <button class="btn" onclick="comecar()">Jogar de novo</button>
+        <button class="btn btn-secundario" onclick="mostrarTela('tela-inicio')">Início</button>
+    </div>
+
+</div>
+</body>
+</html>

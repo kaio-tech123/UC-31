@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<div class="card">
+    <div class="emoji">{{ emoji }}</div>
+    <h1>Resultado Final</h1>
+
+    <div class="placar">
+        <span class="numero">{{ pontuacao }}</span>
+        <span class="divisor">/</span>
+        <span class="total">{{ total }}</span>
+    </div>
+
+    <p class="mensagem">{{ mensagem }}</p>
+
+    <a href="{{ url_for('reiniciar') }}" class="btn">Jogar de novo</a>
+    <a href="{{ url_for('inicio') }}" class="btn btn-secundario">Início</a>
+</div>
+
+{% endblock %}

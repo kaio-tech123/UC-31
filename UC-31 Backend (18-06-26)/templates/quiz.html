@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<div class="card">
+
+    <div class="progresso-topo">
+        <span>Pergunta {{ numero + 1 }} de {{ total }}</span>
+        <span>Pontuação: {{ pontuacao }}</span>
+    </div>
+
+    <div class="barra-container">
+        <div class="barra-progresso" style="width: {{ progresso }}%"></div>
+    </div>
+
+    <h2>{{ pergunta }}</h2>
+
+    <form action="{{ url_for('responder') }}" method="POST">
+        {% for opcao in opcoes %}
+        <label class="opcao">
+            <input type="radio" name="resposta" value="{{ opcao }}">
+            <span>{{ opcao }}</span>
+        </label>
+        {% endfor %}
+
+        <button type="submit" class="btn">Responder</button>
+    </form>
+
+</div>
+
+{% endblock %}

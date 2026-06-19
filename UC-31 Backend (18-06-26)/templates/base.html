@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Casas de Apostas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        {% with mensagens = get_flashed_messages(with_categories=true) %}
+            {% if mensagens %}
+                {% for categoria, texto in mensagens %}
+                    <div class="flash flash-{{ categoria }}">{{ texto }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block conteudo %}{% endblock %}
+    </div>
+
+</body>
+</html>

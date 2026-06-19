@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<div class="card">
+    <div class="emoji">🎰</div>
+    <h1>Quiz - Casas de Apostas</h1>
+    <p>Teste seus conhecimentos sobre o mundo das apostas esportivas!</p>
+    <p>São <strong>{{ total_perguntas }} perguntas</strong> sobre odds, cashout, regulamentação e mais.</p>
+
+    <a href="{{ url_for('quiz') }}" class="btn">Começar o quiz</a>
+</div>
+
+{% endblock %}

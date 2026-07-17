@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Filmes</title>
+</head>
+
+<body>
+
+    <h1>Cadastro de Filmes</h1>
+
+    <form method="POST">
+
+        <label>Nome do Filme</label><br>
+        <input type="text" name="nome" required>
+
+        <br><br>
+
+        <label>Gênero</label><br>
+        <input type="text" name="genero" required>
+
+        <br><br>
+
+        <label>Ano de Lançamento</label><br>
+        <input type="number" name="ano" required>
+
+        <br><br>
+
+        <button type="submit">
+            Cadastrar
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="{{ url_for('listar') }}">
+        Ver Filmes Cadastrados
+    </a>
+
+</body>
+
+</html>

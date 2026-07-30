@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Meu perfil - GamesHub Edu{% endblock %}
+
+{% block content %}
+<h1>{{ usuario.nome }}</h1>
+<p>Conta criada em {{ usuario.data_cadastro }}</p>
+
+<h2>Editar nome</h2>
+<form method="post" action="{{ url_for('perfil') }}" class="formulario">
+    <div class="campo">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" value="{{ usuario.nome }}" required>
+    </div>
+    <button type="submit" class="botao">Salvar</button>
+</form>
+
+<h2>Meus jogos alugados</h2>
+
+{% if meus_alugueis %}
+    <ul class="lista-alugueis">
+        {% for aluguel in meus_alugueis %}
+            <li class="item-aluguel">
+                <div>
+                    <strong>{{ aluguel.jogo.nome }}</strong>
+                    <p>Alugado em {{ aluguel.data_inicio }}, devolucao ate {{ aluguel.data_devolucao }}</p>
+                </div>
+                <form method="post" action="{{ url_for('devolver_jogo', aluguel_id=aluguel.id) }}">
+                    <button type="submit" class="botao botao-secundario">Devolver</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Voce ainda nao alugou nenhum jogo.</p>
+    <a href="{{ url_for('catalogo') }}" class="botao">Ver catalogo</a>
+{% endif %}
+{% endblock %}

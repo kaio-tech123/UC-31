@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "nome": "asdfghjkl",
+    "email": "a@gmail.com",
+    "senha_hash": "scrypt:32768:8:1$zEgRaA4vmsOyZmWm$6e47f21030e75d40b5c4e745c028db9c2338b64e5c6120a8da2be35eb16ac29288cf28ae1ac284a041b9cd0ec5eedabf1a18fd6a014415f5308b1c57db07617f",
+    "data_cadastro": "30/07/2026"
+  }
+]

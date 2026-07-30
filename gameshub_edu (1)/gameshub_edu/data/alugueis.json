@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "usuario_id": 1,
+    "jogo_id": 14,
+    "data_inicio": "30/07/2026",
+    "data_devolucao": "06/08/2026"
+  },
+  {
+    "id": 2,
+    "usuario_id": 1,
+    "jogo_id": 1,
+    "data_inicio": "30/07/2026",
+    "data_devolucao": "06/08/2026"
+  },
+  {
+    "id": 3,
+    "usuario_id": 1,
+    "jogo_id": 13,
+    "data_inicio": "30/07/2026",
+    "data_devolucao": "06/08/2026"
+  },
+  {
+    "id": 4,
+    "usuario_id": 1,
+    "jogo_id": 2,
+    "data_inicio": "30/07/2026",
+    "data_devolucao": "06/08/2026"
+  }
+]

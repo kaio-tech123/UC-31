@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "nome": "Matemagica",
+    "categoria": "Matematica",
+    "faixa_etaria": "8-12 anos",
+    "descricao": "Jogo de quebra-cabecas onde o jogador resolve contas e desafios de logica para passar de fase."
+  },
+  {
+    "id": 2,
+    "nome": "PortuguesQuest",
+    "categoria": "Portugues",
+    "faixa_etaria": "9-14 anos",
+    "descricao": "Jogo de aventura em que o jogador responde perguntas de gramatica e interpretacao de texto."
+  },
+  {
+    "id": 3,
+    "nome": "CodeVentura",
+    "categoria": "Programacao",
+    "faixa_etaria": "12-17 anos",
+    "descricao": "Jogo de logica de programacao em blocos, onde o jogador programa um robo para sair do labirinto."
+  },
+  {
+    "id": 4,
+    "nome": "HistoriAventura",
+    "categoria": "Historia",
+    "faixa_etaria": "10-15 anos",
+    "descricao": "Jogo de linha do tempo em que o jogador toma decisoes dentro de eventos historicos."
+  },
+  {
+    "id": 5,
+    "nome": "CienciaLab",
+    "categoria": "Ciencias",
+    "faixa_etaria": "9-13 anos",
+    "descricao": "Laboratorio virtual onde o jogador faz experimentos simples de fisica e quimica."
+  },
+  {
+    "id": 6,
+    "nome": "GeoExplora",
+    "categoria": "Geografia",
+    "faixa_etaria": "8-13 anos",
+    "descricao": "Jogo de mapas onde o jogador descobre paises, capitais e relevos do mundo."
+  },
+  {
+    "id": 7,
+    "nome": "GeometriX",
+    "categoria": "Matematica",
+    "faixa_etaria": "10-14 anos",
+    "descricao": "Jogo de construcao onde o jogador usa formas geometricas e medidas para montar cenarios."
+  },
+  {
+    "id": 8,
+    "nome": "GramaticaBattle",
+    "categoria": "Portugues",
+    "faixa_etaria": "10-15 anos",
+    "descricao": "Jogo de batalhas por turnos em que acertar a gramatica da mais forca pro personagem."
+  },
+  {
+    "id": 9,
+    "nome": "AlgoritmoZ",
+    "categoria": "Programacao",
+    "faixa_etaria": "15-18 anos",
+    "descricao": "Jogo avancado de programacao em que o jogador escreve algoritmos para resolver desafios de logica complexos."
+  },
+  {
+    "id": 10,
+    "nome": "ImperioQuiz",
+    "categoria": "Historia",
+    "faixa_etaria": "11-16 anos",
+    "descricao": "Jogo de perguntas e respostas sobre imperios e revolucoes ao longo da historia."
+  },
+  {
+    "id": 11,
+    "nome": "BioMissao",
+    "categoria": "Ciencias",
+    "faixa_etaria": "10-14 anos",
+    "descricao": "Jogo de missoes onde o jogador explora o corpo humano e os ecossistemas para aprender biologia."
+  },
+  {
+    "id": 12,
+    "nome": "MapaMundi Pro",
+    "categoria": "Geografia",
+    "faixa_etaria": "13-17 anos",
+    "descricao": "Jogo de estrategia com mapas mais detalhados, clima, relevo e geopolitica dos paises."
+  },
+  {
+    "id": 13,
+    "nome": "RedesSim",
+    "categoria": "TI",
+    "faixa_etaria": "15-18 anos",
+    "descricao": "Simulador onde o jogador monta redes de computadores e resolve problemas de conexao."
+  },
+  {
+    "id": 14,
+    "nome": "CyberDefesa",
+    "categoria": "TI",
+    "faixa_etaria": "16-18 anos",
+    "descricao": "Jogo de estrategia avancado sobre seguranca da informacao, onde o jogador protege sistemas de ataques."
+  },
+  {
+    "id": 15,
+    "nome": "EstruturaMax",
+    "categoria": "Engenharia",
+    "faixa_etaria": "16-18 anos",
+    "descricao": "Jogo de construcao avancado onde o jogador projeta estruturas e testa resistencia e peso maximo."
+  },
+  {
+    "id": 16,
+    "nome": "CircuitoLab",
+    "categoria": "Engenharia",
+    "faixa_etaria": "15-18 anos",
+    "descricao": "Laboratorio virtual avancado onde o jogador monta circuitos eletricos e resolve desafios tecnicos."
+  }
+]

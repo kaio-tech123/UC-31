@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}GamesHub Edu{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteudo principal</a>
+
+    <header class="topo">
+        <div class="container topo-barra">
+            <a href="{{ url_for('catalogo') }}" class="marca">
+                <img src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="Logo GamesHub Edu" class="marca-logo">
+                GamesHub Edu
+            </a>
+
+            <nav aria-label="Navegacao principal">
+                <ul class="menu">
+                    <li><a href="{{ url_for('catalogo') }}">Catalogo</a></li>
+                    {% if usuario_logado %}
+                        <li><a href="{{ url_for('perfil') }}">Meu perfil</a></li>
+                        <li><a href="{{ url_for('logout') }}">Sair</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('login') }}">Entrar</a></li>
+                        <li><a href="{{ url_for('cadastro') }}">Criar conta</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        {% with mensagens = get_flashed_messages(with_categories=true) %}
+            {% if mensagens %}
+                <div role="status" aria-live="polite">
+                    {% for categoria, mensagem in mensagens %}
+                        <p class="mensagem mensagem-{{ categoria }}">{{ mensagem }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <main id="conteudo-principal" class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>GamesHub Edu - projeto de UC31</p>
+        </div>
+    </footer>
+</body>
+</html>

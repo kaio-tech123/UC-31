@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}{{ jogo.nome }} - GamesHub Edu{% endblock %}
+
+{% block content %}
+<a href="{{ url_for('catalogo') }}">Voltar ao catalogo</a>
+
+<h1>{{ jogo.nome }}</h1>
+<p>{{ jogo.categoria }} - Faixa etaria: {{ jogo.faixa_etaria }}</p>
+<p>{{ jogo.descricao }}</p>
+
+{% if jogo.disponivel %}
+    <span class="selo selo-disponivel">Disponivel</span>
+
+    {% if usuario_logado %}
+        <form method="post" action="{{ url_for('alugar_jogo', jogo_id=jogo.id) }}">
+            <button type="submit" class="botao">Alugar este jogo</button>
+        </form>
+    {% else %}
+        <p><a href="{{ url_for('login') }}">Entre na sua conta</a> para alugar este jogo.</p>
+    {% endif %}
+{% else %}
+    <span class="selo selo-alugado">Alugado no momento</span>
+{% endif %}
+{% endblock %}

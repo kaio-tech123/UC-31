@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    background-color: #0d0d12;
+    color: #f0eaff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2 {
+    color: #b794f6;
+}
+
+a {
+    color: #b794f6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pular-conteudo {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: #ffffff;
+    color: #0d0d12;
+    padding: 10px 16px;
+    z-index: 10;
+}
+
+.pular-conteudo:focus {
+    left: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #b794f6;
+    outline-offset: 2px;
+}
+
+.topo {
+    background-color: #17141f;
+    border-bottom: 1px solid #322b45;
+    padding: 16px 0;
+}
+
+.topo-barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.marca-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #f0eaff;
+}
+
+.menu a:hover {
+    color: #b794f6;
+}
+
+.mensagem {
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin: 16px 0 0;
+}
+
+.mensagem-sucesso {
+    background-color: #1e3a2f;
+    color: #7ee2b8;
+}
+
+.mensagem-erro {
+    background-color: #3a1e1e;
+    color: #f28b82;
+}
+
+.mensagem-aviso {
+    background-color: #3a341e;
+    color: #f2d675;
+}
+
+.formulario-filtro {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: end;
+    margin: 20px 0;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.campo label {
+    font-weight: bold;
+    color: #f0eaff;
+}
+
+.campo input,
+.campo select {
+    padding: 8px;
+    border: 1px solid #322b45;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #1a1625;
+    color: #f0eaff;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #7c3aed;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.botao:hover {
+    background-color: #6425d0;
+}
+
+.botao-secundario {
+    background-color: #b3261e;
+}
+
+.botao-secundario:hover {
+    background-color: #8f1e17;
+}
+
+.grade-jogos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.card-jogo {
+    display: block;
+    background-color: #17141f;
+    border: 1px solid #322b45;
+    border-radius: 6px;
+    padding: 16px;
+    text-decoration: none;
+    color: #f0eaff;
+}
+
+.card-jogo h2 {
+    margin-top: 0;
+}
+
+.card-jogo:hover {
+    border-color: #b794f6;
+}
+
+.selo {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.selo-disponivel {
+    background-color: #1e3a2f;
+    color: #7ee2b8;
+}
+
+.selo-alugado {
+    background-color: #3a1e1e;
+    color: #f28b82;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 400px;
+    margin: 20px 0;
+}
+
+.lista-alugueis {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.item-aluguel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #17141f;
+    border: 1px solid #322b45;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.rodape {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #322b45;
+    color: #a89bc7;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .topo-barra {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
